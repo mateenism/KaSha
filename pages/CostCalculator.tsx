@@ -194,7 +194,10 @@ const CostCalculator: React.FC = () => {
                 {CALCULATOR_SERVICES.map(service => (
                   <button key={service.id} onClick={() => handleServiceToggle(service.id)} className={`flex flex-col justify-between text-left p-4 border rounded-sm cursor-pointer transition-all h-28 ${selectedServices.includes(service.id) ? 'bg-brand-gold/10 border-brand-gold ring-2 ring-brand-gold' : 'border-gray-200 dark:border-brand-dark-secondary hover:border-brand-gold/50'}`}>
                     <span className="font-semibold text-brand-dark dark:text-brand-light">{service.name}</span>
-                    <span className="font-bold text-brand-dark dark:text-brand-light">{formatCurrency(service.cost)}</span>
+                    <div>
+                        <span className="text-xs text-brand-gray">Starts from</span>
+                        <span className="block font-bold text-brand-dark dark:text-brand-light -mt-1">{formatCurrency(service.cost)}</span>
+                    </div>
                   </button>
                 ))}
               </div>
