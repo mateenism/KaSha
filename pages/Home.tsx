@@ -162,14 +162,6 @@ const Home: React.FC = () => {
                 <div className="p-8 text-center flex-grow flex flex-col">
                   <h3 className="text-2xl font-serif text-brand-dark dark:text-brand-light mb-2">{service.title}</h3>
                   <p className="text-brand-gray mb-4 flex-grow">{service.shortDescription}</p>
-                   <div className="flex items-baseline justify-center gap-2 mb-6">
-                      <span className="text-3xl font-bold text-brand-gold">
-                          {formatCurrency(service.discountedPrice)}
-                      </span>
-                      <span className="text-lg text-brand-gray line-through">
-                          {formatCurrency(service.originalPrice)}
-                      </span>
-                  </div>
                    <Link to={`/services/${service.id}`} className="font-bold text-brand-dark dark:text-brand-light border-b-2 border-brand-gold hover:text-brand-gold transition-colors mt-auto">
                         Learn More
                     </Link>

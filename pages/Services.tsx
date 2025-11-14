@@ -38,14 +38,6 @@ const Services: React.FC = () => {
                 <div className="p-6">
                   <h3 className="text-2xl font-serif text-brand-dark dark:text-brand-light group-hover:text-brand-gold transition-colors mb-2">{service.title}</h3>
                   <p className="text-brand-gray mb-4">{service.shortDescription}</p>
-                   <div className="flex items-baseline gap-2">
-                    <span className="text-2xl font-bold text-brand-gold">
-                      {formatCurrency(service.discountedPrice)}
-                    </span>
-                    <span className="text-md text-brand-gray line-through">
-                      {formatCurrency(service.originalPrice)}
-                    </span>
-                  </div>
                 </div>
               </Link>
             ))}
